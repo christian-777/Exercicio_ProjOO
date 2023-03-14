@@ -1,52 +1,25 @@
-﻿internal class Program
+﻿using Exercicio_PorjOO;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-        Pessoa p = new Pessoa();
-        Console.WriteLine("informe seu nome");
-        p.DefinirNome(Console.ReadLine());
-        Console.WriteLine("informe sobrenome");
-        p.DefinirSobrenome(Console.ReadLine());
-        Console.WriteLine("Nome: " + p.RetornarNome());
-        Console.WriteLine("Sobrenome: " + p.RetornarSobrenome());
-        Console.WriteLine("Nome completo: " + p.RetornarNomeCompleto());
-    }
+        //Person person = new Person();
 
-    public class Pessoa
-    {
-        string? nome;
-        string? sobrenome;
+        //person.PurchaseParkingPass();
 
-        public Pessoa()
-        {
+        Student student = new Student();
 
-        }
+        student.getStudentNumber();
 
-        public void DefinirNome(string nome)
-        {
-            this.nome = nome;
-        }
+        Console.WriteLine(student);
 
-        public string RetornarNome()
-        {
-            return this.nome;
-        }
 
-        public void DefinirSobrenome(string sobrenome)
-        {
-            this.sobrenome = sobrenome;
-        }
+        Professor professor = new Professor();
 
-        public string RetornarSobrenome()
-        {
-            return this.sobrenome;
-        }
+        professor.getSalary();
 
-        public string RetornarNomeCompleto()
-        {
-
-            return this.nome + " " + this.sobrenome;
-        }
+        Console.WriteLine(professor);
     }
 }
 
